@@ -21,12 +21,13 @@ func add(a, b int) int {
 func ClassifyNumber(n int) string {
 	// TODO: 用 if / else if / else 完成三个分支。
 	// Go 的 if 条件不写小括号，左大括号必须和 if 同一行。
-	if n>0
+	if n>0 {
 	return "positive"
-	else if n=0
+	} else if n==0 {
 	return"zero"
-	else n<0
+	} else {
 	return"negative"
+	}
 }
 
 // SumTo 返回 1 + 2 + ... + n；n 小于等于 0 时返回 0。
@@ -48,7 +49,7 @@ func Describe(name string, age int) string {
 	// Sprintf 和 Printf 的格式化规则一样，但它返回字符串而不是打印。
 	// 字符串用 %s，整数用 %d。
 
-	return fmt.Sprintf("%s 今年%d 岁",name,age)
+	return fmt.Sprintf("%s 今年 %d 岁",name,age)
 }
 
 // MaxScore 是导出的常量，其他包可以用 syntax.MaxScore 读到它。
@@ -61,10 +62,9 @@ const minScore = 0
 // 低于下限返回下限，高于上限返回上限，否则原样返回。
 func Clamp(score int) int {
 	// TODO: 用 if 判断两个边界，直接用上面两个常量，不要写死 0 和 100。
-	if score < MinScore {
-return MinScore
-	}
-	if score > MaxScore {
+	if score < minScore {
+return minScore
+	} else if score > MaxScore {
 		return MaxScore
 	}
 	return score
