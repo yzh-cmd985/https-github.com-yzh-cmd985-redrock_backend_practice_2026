@@ -14,11 +14,11 @@ func Add(a, b int) int {
 // helper 首字母小写，别的包看不见它，但同一个包里随便用。
 func AddDoubled(a, b int) int {
 	// TODO: 调用 helper 完成。
-	return helper(1) + helper(2)
+	return helper(a) + helper(b)
 }
 
 // helper 返回 x 的两倍。首字母小写，只在 calc 包内可见。
 func helper(x int) int {
 	// TODO: 返回 x 的两倍。
-	return x*2
+	return 2*x
 }
